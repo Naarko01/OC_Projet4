@@ -1,0 +1,39 @@
+@use "sass:color";
+
+$localisation-color: mix(#eaeaea, grey, 100%);
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 14px;
+        padding-bottom: 13px;
+        height: 36px;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    &__localisation {
+        width: 100%;
+        height: 50px;
+        background-color: $localisation-color;
+        box-shadow:
+            inset 0 2px 5px gray,
+            0 2px 5px gray;
+
+        &--content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
