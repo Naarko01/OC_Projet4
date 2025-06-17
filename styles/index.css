@@ -1,3 +1,7 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -9,6 +13,33 @@ body .main-container {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+
+.restaurants {
+  padding-left: 17px;
+  padding-right: 18px;
+  margin-bottom: 66px;
+}
+.restaurants__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.accueil {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accueil__titre {
+  text-align: center;
 }
 
 .header {
@@ -39,6 +70,79 @@ body .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+.footer__logo {
+  width: 100%;
+  font-family: "Shrikhand", serif;
+  color: white;
+  margin-top: 22px;
+  font-size: 17px;
+  font-weight: 400;
+}
+.footer__link {
+  width: 100%;
+  color: white;
+}
+.footer__link ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer__link ul .liste {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+.footer__link ul .liste i {
+  margin-right: 11px;
+}
+.footer__link ul .liste .fa-handshake-angle {
+  font-size: 11px;
+}
+.footer__link ul .un,
+.footer__link ul .deux {
+  font-weight: 500;
+}
+
+.cards {
+  background-color: white;
+  border-radius: 15px;
+  width: 100%;
+  height: 251px;
+}
+.cards img {
+  object-fit: cover;
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.cards__content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: space-between;
+  width: 100%;
+  height: 76px;
+  gap: 5px;
+}
+.cards__content--titre {
+  margin: 16px 0 0 13px;
+}
+.cards__content--text {
+  margin: 0 0 12px 13px;
+}
+.cards__content--like {
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=index.css.map */

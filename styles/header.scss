@@ -1,6 +1,6 @@
 @use "sass:color";
 
-$localisation-color: mix(#eaeaea, grey, 100%);
+$localisation-color: color.mix(#eaeaea, grey, 100%);
 
 .header {
     display: flex;

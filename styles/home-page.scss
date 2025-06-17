@@ -5,6 +5,11 @@ $darkGreen: #008766;
 $lightBlue: #89c8fa;
 $darkBlue: #003a68;
 $purple: #9356dc;
+$gray-bg: #f3f3f3;
+
+* {
+    font-family: "Roboto", sans-serif;
+}
 
 body {
     display: flex;
@@ -17,5 +22,34 @@ body {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        background-color: $gray-bg;
+    }
+}
+
+.restaurants {
+    padding-left: 17px;
+    padding-right: 18px;
+    margin-bottom: 66px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 18px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.accueil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__titre {
+        text-align: center;
     }
 }
