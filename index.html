@@ -17,8 +17,8 @@
 <body>
     <div class="main-container">
         <header class="header">
-            <div class="header__logo">
-                <img src="images/logo/ohmyfood.png" alt="logo OhMyFood">
+            <div class="header__card">
+                <img src="images/logo/ohmyfood.png" alt="logo OhMyFood" class="header__card--logo">
             </div>
             <div class="header__localisation">
                 <div class="header__localisation--content">
@@ -31,21 +31,19 @@
             <section class="accueil">
                 <h1 class="accueil__titre">Réservez le menu qui vous convient</h1>
                 <p class="accueil__p">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="">Explorez nos restaurants</a>
+                <a href="" class="accueil__btn button">Explorez nos restaurants</a>
             </section>
             <section class="fonctionnement">
                 <h2 class="fonctionnement__titre">Fonctionnement</h2>
-                <ol>
-                    <li>
-                        <div class="fonctionnement__cards">Choisissez un restaurant</div>
-                    </li>
-                    <li>
-                        <div class="fonctionnement__cards">Composez votre menu</div>
-                    </li>
-                    <li>
-                        <div class="fonctionnement__cards">Dégustez au restaurant</div>
-                    </li>
-                </ol>
+                <ul class="fonctionnement__cards">
+                    <li class="fonctionnement__card"><span class="fonctionnement__card--number">1</span>Choisissez un
+                        restaurant</li>
+                    <li class="fonctionnement__card"><span class="fonctionnement__card--number">2</span>Composez
+                        votre
+                        menu</li>
+                    <li class="fonctionnement__card"><span class="fonctionnement__card--number">3</span>Dégustez au
+                        restaurant</li>
+                </ul>
             </section>
             <section class="restaurants">
                 <h2>Restaurants</h2>

@@ -5,7 +5,8 @@ $darkGreen: #008766;
 $lightBlue: #89c8fa;
 $darkBlue: #003a68;
 $purple: #9356dc;
-$gray-bg: #f3f3f3;
+$primary-bg: #f3f3f3;
+$secondary-bg: #ffffff;
 
 * {
     font-family: "Roboto", sans-serif;
@@ -22,7 +23,7 @@ body {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        background-color: $gray-bg;
+        background-color: $primary-bg;
     }
 }
 
@@ -51,5 +52,52 @@ a {
 
     &__titre {
         text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        height: 68px;
+        margin: 39px 0 0 0;
+    }
+    &__p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0 26px 27px 34px;
+    }
+    &__btn {
+        padding: 15.5px 21.15px;
+        margin-bottom: 57px;
+    }
+}
+
+.fonctionnement {
+    background-color: $secondary-bg;
+    height: 440px;
+    width: 100%;
+
+    &__titre {
+        padding-top: 48px;
+        padding-left: 20px;
+        margin: 0 0 26px 0;
+    }
+
+    &__cards {
+        padding-left: 20px;
+    }
+
+    &__card {
+        width: 65%;
+        list-style: none;
+        background-color: $primary-bg;
+        border-radius: 20px;
+        padding: 30px 50px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 10px grey;
+
+        &--number {
+            background-color: $purple;
+            border-radius: 50%;
+            padding: 8px 8px;
+            text-align: start;
+        }
     }
 }

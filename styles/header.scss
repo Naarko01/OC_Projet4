@@ -8,17 +8,23 @@ $localisation-color: color.mix(#eaeaea, grey, 100%);
     justify-content: center;
     align-items: center;
 
-    &__logo {
+    &__card {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         width: 100%;
         padding-top: 14px;
-        padding-bottom: 13px;
-        height: 36px;
+        padding-bottom: 5px;
+        height: 44px;
 
-        img {
+        &--logo {
             width: 50%;
+            height: 44px;
+        }
+        &--arrow {
+            position: absolute;
+            left: 23px;
         }
     }
 

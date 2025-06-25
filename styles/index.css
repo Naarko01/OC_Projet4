@@ -40,6 +40,49 @@ a {
 }
 .accueil__titre {
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  height: 68px;
+  margin: 39px 0 0 0;
+}
+.accueil__p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 26px 27px 34px;
+}
+.accueil__btn {
+  padding: 15.5px 21.15px;
+  margin-bottom: 57px;
+}
+
+.fonctionnement {
+  background-color: #ffffff;
+  height: 440px;
+  width: 100%;
+}
+.fonctionnement__titre {
+  padding-top: 48px;
+  padding-left: 20px;
+  margin: 0 0 26px 0;
+}
+.fonctionnement__cards {
+  padding-left: 20px;
+}
+.fonctionnement__card {
+  width: 65%;
+  list-style: none;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  padding: 30px 50px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 10px grey;
+}
+.fonctionnement__card--number {
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 8px 8px;
+  text-align: start;
 }
 
 .header {
@@ -48,17 +91,23 @@ a {
   justify-content: center;
   align-items: center;
 }
-.header__logo {
+.header__card {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   padding-top: 14px;
-  padding-bottom: 13px;
-  height: 36px;
+  padding-bottom: 5px;
+  height: 44px;
 }
-.header__logo img {
+.header__card--logo {
   width: 50%;
+  height: 44px;
+}
+.header__card--arrow {
+  position: absolute;
+  left: 23px;
 }
 .header__localisation {
   width: 100%;
@@ -143,6 +192,13 @@ a {
 }
 .cards__content--like {
   align-self: flex-end;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */
