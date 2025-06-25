@@ -32,3 +32,27 @@
         }
     }
 }
+
+.menuCardsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 13px;
+
+    .menuCard {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 69px;
+
+        h4 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .coursePrice {
+            position: absolute;
+            right: 13.5px;
+        }
+    }
+}

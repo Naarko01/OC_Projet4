@@ -1,3 +1,4 @@
+/******* shared style *******/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -6,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
+  width: 100%;
 }
 body .main-container {
   width: 100%;
@@ -14,8 +16,16 @@ body .main-container {
   margin: 0;
   box-sizing: border-box;
   background-color: #f3f3f3;
+  position: relative;
+}
+body .main-container h2 {
+  margin: 0;
+}
+body .main-container h3 {
+  margin: 0;
 }
 
+/******* home page style *******/
 .restaurants {
   padding-left: 17px;
   padding-right: 18px;
@@ -85,6 +95,50 @@ a {
   text-align: start;
 }
 
+/******* menu shared style *******/
+.menu__background img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.contentBox {
+  width: 100%;
+  position: absolute;
+  top: 283px;
+}
+
+.menu {
+  width: 100%;
+}
+.menu__presentation {
+  width: 100%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.menu__presentation--restaurantName {
+  position: relative;
+  margin-bottom: 40px;
+}
+.menu__presentation--restaurantName h2 {
+  padding: 32px 17px 0 17px;
+  font-family: "Shrikhand", serif;
+}
+.menu__presentation--restaurantName i {
+  position: absolute;
+  right: 41px;
+  top: 40px;
+  font-size: 20px;
+}
+.menu__presentation--btn {
+  padding: 16px 48px 15px 49px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -98,7 +152,7 @@ a {
   position: relative;
   width: 100%;
   padding-top: 14px;
-  padding-bottom: 5px;
+  padding-bottom: 13px;
   height: 44px;
 }
 .header__card--logo {
@@ -192,6 +246,28 @@ a {
 }
 .cards__content--like {
   align-self: flex-end;
+}
+
+.menuCardsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 13px;
+}
+.menuCardsContainer .menuCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 69px;
+}
+.menuCardsContainer .menuCard h4 {
+  margin: 0;
+}
+.menuCardsContainer .menuCard p {
+  margin: 0;
+}
+.menuCardsContainer .menuCard .coursePrice {
+  position: absolute;
+  right: 13.5px;
 }
 
 .button {
