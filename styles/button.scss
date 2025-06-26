@@ -1,6 +1,8 @@
+$buttonColor: linear-gradient(#ff79da, #9356dc);
+
 .button {
     display: inline-block;
     color: white;
-    background: linear-gradient(#ff79da, #9356dc);
+    background: $buttonColor;
     border-radius: 25px;
 }
