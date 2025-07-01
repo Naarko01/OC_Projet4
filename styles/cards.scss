@@ -23,18 +23,26 @@ $cardShadow: color.mix(black, white, 10%);
         flex-flow: column wrap;
         justify-content: center;
         align-content: space-between;
+        position: relative;
         width: 100%;
         height: 76px;
         gap: 5px;
 
         &--titre {
-            margin: 16px 0 0 13px;
+            padding: 16px 0 0 16px;
+            font-size: 18px;
+            font-weight: 700;
         }
         &--text {
-            margin: 0 0 12px 13px;
+            margin: 0 0 12px 16px;
+            font-size: 17px;
+            font-weight: 300;
         }
         &--like {
             align-self: flex-end;
+            position: absolute;
+            top: 23px;
+            right: 28px;
         }
     }
 }
@@ -46,6 +54,10 @@ $cardShadow: color.mix(black, white, 10%);
     padding-right: 13px;
     gap: 12px;
     margin-bottom: 40px;
+
+    @media (min-width: 1024px) {
+        width: 634px;
+    }
 
     h3 {
         font-size: 16px;
