@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$buttonColor: linear-gradient(#ff79da, #9356dc);
+$cardShadow: color.mix(black, white, 10%);
+$likeColor: linear-gradient(0deg, #ff79da, #9356dc);
+$footer-bg: #353535;
+$localisation-color: color.mix(#eaeaea, grey, 100%);
+$lightGreen: #99e2d0;
+$darkGreen: #008766;
+$lightBlue: #89c8fa;
+$darkBlue: #003a68;
+$purple: #9356dc;
+$primary-bg: #f3f3f3;
+$secondary-bg: #ffffff;
+
+@mixin iconeGradient {
+    background: $likeColor;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}

@@ -12,6 +12,7 @@ body {
 body .main-container {
   width: 100%;
   max-width: 1440px;
+  min-width: 350px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -175,6 +176,7 @@ a {
   .fonctionnement__card {
     padding: 28px 38px;
     margin-bottom: 50px;
+    display: flex;
   }
 }
 .fonctionnement__card--number {
@@ -231,14 +233,29 @@ a {
   padding: 32px 17px 0 17px;
   font-family: "Shrikhand", serif;
 }
-.menu__presentation--restaurantName i {
+.menu__presentation--restaurantName-like {
   position: absolute;
-  right: 41px;
-  top: 40px;
-  font-size: 20px;
+  left: 312px;
+  top: 34px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu__presentation--restaurantName-like .liked {
+  display: none;
+  background: linear-gradient(0deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.menu__presentation--restaurantName-like:active > .liked {
+  display: unset;
+}
+.menu__presentation--restaurantName-like:active > .unliked {
+  display: none;
 }
 @media (min-width: 1024px) {
-  .menu__presentation--restaurantName i {
+  .menu__presentation--restaurantName-like {
     right: -24px;
   }
 }
@@ -407,6 +424,22 @@ a {
   position: absolute;
   top: 23px;
   right: 28px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.cards__content--like .liked {
+  display: none;
+  background: linear-gradient(0deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.cards__content--like:hover > .liked {
+  display: unset;
+}
+.cards__content--like:hover > .unliked {
+  display: none;
 }
 
 .menuCardsContainer {
@@ -431,32 +464,62 @@ a {
 }
 .menuCardsContainer .menuCard {
   display: flex;
-  flex-direction: column;
   position: relative;
   height: 69px;
-  gap: 5px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 10px rgb(229.5, 229.5, 229.5);
+  cursor: pointer;
+  overflow: hidden;
 }
-.menuCardsContainer .menuCard h4 {
+.menuCardsContainer .menuCard--content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: clip;
+}
+.menuCardsContainer .menuCard--content h4 {
   margin: 0;
   padding-top: 12px;
   padding-left: 14px;
   font-size: 18px;
   font-weight: 500;
 }
-.menuCardsContainer .menuCard p {
+.menuCardsContainer .menuCard--content p {
   margin: 0;
   padding-left: 14px;
   font-size: 15px;
   font-weight: 300;
 }
-.menuCardsContainer .menuCard .coursePrice {
+.menuCardsContainer .menuCard--content .coursePrice {
   position: absolute;
   right: 13.5px;
   top: 37.5px;
   font-weight: 700;
+  transform: translateX(0);
+  transition: transform 250ms ease-in;
+}
+.menuCardsContainer .menuCard--content:hover + .menuCard--selectionAnim {
+  transform: translateX(0);
+}
+.menuCardsContainer .menuCard--content:hover > .coursePrice {
+  transform: translateX(-59px);
+}
+.menuCardsContainer .menuCard--selectionAnim {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  color: white;
+  width: 59px;
+  height: 69px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in;
 }
 
 .button {

@@ -1,8 +1,4 @@
-@use "sass:color";
-
-$lightGreen: #99e2d0;
-$darkGreen: #008766;
-$cardShadow: color.mix(black, white, 10%);
+@use "./globalVariables.scss" as *;
 
 .cards {
     background-color: white;
@@ -43,6 +39,19 @@ $cardShadow: color.mix(black, white, 10%);
             position: absolute;
             top: 23px;
             right: 28px;
+            cursor: pointer;
+            font-size: 24px;
+
+            .liked {
+                display: none;
+                @include iconeGradient();
+            }
+            &:hover > .liked {
+                display: unset;
+            }
+            &:hover > .unliked {
+                display: none;
+            }
         }
     }
 }
@@ -69,32 +78,65 @@ $cardShadow: color.mix(black, white, 10%);
 
     .menuCard {
         display: flex;
-        flex-direction: column;
         position: relative;
         height: 69px;
-        gap: 5px;
         border-radius: 15px;
         background-color: white;
         box-shadow: 0 4px 10px $cardShadow;
+        cursor: pointer;
+        overflow: hidden;
 
-        h4 {
-            margin: 0;
-            padding-top: 12px;
-            padding-left: 14px;
-            font-size: 18px;
-            font-weight: 500;
+        &--content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            overflow: clip;
+
+            h4 {
+                margin: 0;
+                padding-top: 12px;
+                padding-left: 14px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p {
+                margin: 0;
+                padding-left: 14px;
+                font-size: 15px;
+                font-weight: 300;
+            }
+            .coursePrice {
+                position: absolute;
+                right: 13.5px;
+                top: 37.5px;
+                font-weight: 700;
+                transform: translateX(0);
+                transition: transform 250ms ease-in;
+            }
+
+            &:hover + .menuCard--selectionAnim {
+                transform: translateX(0);
+            }
+            &:hover > .coursePrice {
+                transform: translateX(-59px);
+            }
         }
-        p {
-            margin: 0;
-            padding-left: 14px;
-            font-size: 15px;
-            font-weight: 300;
-        }
-        .coursePrice {
+
+        &--selectionAnim {
             position: absolute;
-            right: 13.5px;
-            top: 37.5px;
-            font-weight: 700;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $lightGreen;
+            color: white;
+            width: 59px;
+            height: 69px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transform: translateX(100%);
+            transition: transform 250ms ease-in;
         }
     }
 }

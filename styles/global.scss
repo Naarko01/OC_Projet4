@@ -1,12 +1,4 @@
-@use "sass:color";
-
-$lightGreen: #99e2d0;
-$darkGreen: #008766;
-$lightBlue: #89c8fa;
-$darkBlue: #003a68;
-$purple: #9356dc;
-$primary-bg: #f3f3f3;
-$secondary-bg: #ffffff;
+@use "./globalVariables.scss" as *;
 
 /******* shared style *******/
 
@@ -23,6 +15,7 @@ body {
     .main-container {
         width: 100%;
         max-width: 1440px;
+        min-width: 350px;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -183,6 +176,7 @@ a {
         @media (min-width: 767.98px) {
             padding: 28px 38px;
             margin-bottom: 50px;
+            display: flex;
         }
 
         &--number {
@@ -245,11 +239,23 @@ a {
                 font-family: "Shrikhand", serif;
             }
 
-            i {
+            &-like {
                 position: absolute;
-                right: 41px;
-                top: 40px;
-                font-size: 20px;
+                left: 312px;
+                top: 34px;
+                font-size: 24px;
+                cursor: pointer;
+
+                .liked {
+                    display: none;
+                    @include iconeGradient();
+                }
+                &:active > .liked {
+                    display: unset;
+                }
+                &:active > .unliked {
+                    display: none;
+                }
 
                 @media (min-width: 1024px) {
                     right: -24px;

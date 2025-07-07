@@ -1,6 +1,4 @@
-@use "sass:color";
-
-$localisation-color: color.mix(#eaeaea, grey, 100%);
+@use "./globalVariables.scss" as *;
 
 .header {
     display: flex;

@@ -1,4 +1,4 @@
-$buttonColor: linear-gradient(#ff79da, #9356dc);
+@use "./globalVariables.scss" as *;
 
 .button {
     display: inline-block;
