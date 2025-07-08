@@ -16,56 +16,143 @@
 
 <body>
     <div class="main-container">
-        <header class="menuHeader">
-            <div class="header__arrow">
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            <div class="header__logo">
-                <img src="images/logo/ohmyfood.png" alt="logo OhMyFood">
+        <header class="header">
+            <div class="header__card">
+                <h1 class="header__card--logo">ohmyfood</h1>
+                <div class="header__card--arrow">
+                    <a href="index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
             </div>
         </header>
-        <main class="menu">
-            <section class="menu__background">
-                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-            </section>
-            <section class="menu__presentation">
-                <div class="menu__restaurantName">
-                    <h2>Le délice des sens</h2>
-                    <i class="fa-regular fa-heart"></i>
+        <div class="menu__background">
+            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo de plat">
+        </div>
+        <div class="contentBox">
+            <main class="menu">
+                <section class="menu__presentation">
+                    <div class="menu__presentation--restaurantName">
+                        <h2>Le délice des sens</h2>
+                        <div class="menu__presentation--restaurantName-like">
+                            <i class="fa-regular fa-heart unliked"></i>
+                            <i class="fa-solid fa-heart liked"></i>
+                        </div>
+                    </div>
+                    <div class="menu__presentation--starter menuCardsContainer">
+                        <h3>ENTRÉES</h3>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Tartare de thon</h4>
+                                <p>Assaisonné au yuzu</p>
+                            </div>
+                            <div class="coursePrice">25€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Bouchée de homard croustillant</h4>
+                                <p>Et sa farandole de petits légumes</p>
+                            </div>
+                            <div class="coursePrice">35€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Velouté de cèpes</h4>
+                                <p>Aux truffes</p>
+                            </div>
+                            <div class="coursePrice">20€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="menu__presentation--mainCourse menuCardsContainer">
+                        <h3>PLATS</h3>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Poulet rôti aux herbes de Provence</h4>
+                                <p>Et sa crème de truffe</p>
+                            </div>
+                            <div class="coursePrice">40€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Langouste rôtie</h4>
+                                <p>Et ses légumes de saison</p>
+                            </div>
+                            <div class="coursePrice">35€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Côte de bœuf Angus</h4>
+                                <p>Et sa purée de panais</p>
+                            </div>
+                            <div class="coursePrice">44€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="menu__presentation--dessert menuCardsContainer">
+                        <h3>DESSERTS</h3>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Farandole de desserts</h4>
+                                <p>Du chef</p>
+                            </div>
+                            <div class="coursePrice">18€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Crème brulée</h4>
+                                <p>Revisitée</p>
+                            </div>
+                            <div class="coursePrice">22€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                        <article class="menuCard">
+                            <div class="menuCard--content">
+                                <h4>Tiramisu</h4>
+                                <p>À la noisette</p>
+                            </div>
+                            <div class="coursePrice">23€</div>
+                            <div class="menuCard--selectionAnim">
+                                <i class="fa-solid fa-circle-check fa-lg"></i>
+                            </div>
+                        </article>
+                    </div>
+                    <a href="" class="menu__presentation--btn button">Commander</a>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__logo">ohmyfood</p>
+                <div class="footer__link">
+                    <ul>
+                        <li class="liste un"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+                        <li class="liste deux"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+                        <li class="liste trois">Mentions légales</li>
+                        <li class="liste quatre">Contact</li>
+                    </ul>
                 </div>
-                <div class="menu__starter">
-                    <h3>ENTRÉES</h3>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                </div>
-                <div class="menu__mainCourse">
-                    <h3>PLATS</h3>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                </div>
-                <div class="menu__dessert">
-                    <h3>DESSERTS</h3>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                </div>
-                <a href="" class="menu__btn button">Commander</a>
-            </section>
-        </main>
-        <footer class="footer">
-            <p class="footer__logo">ohmyfood</p>
-            <div class="footer__link">
-                <ul>
-                    <li class="liste un"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                    <li class="liste deux"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                    <li class="liste trois">Mentions légales</li>
-                    <li class="liste quatre">Contact</li>
-                </ul>
-            </div>
-        </footer>
-
+            </footer>
+        </div>
     </div>
 
 </body>

@@ -26,6 +26,7 @@
         &--arrow {
             position: absolute;
             left: 23px;
+            font-size: 24px;
         }
     }
 
@@ -33,9 +34,7 @@
         width: 100%;
         height: 50px;
         background-color: $localisation-color;
-        box-shadow:
-            inset 0 2px 5px gray,
-            0 2px 5px gray;
+        @include headerShadow;
 
         @media (min-width: 767.98px) {
             box-shadow: unset;

@@ -169,9 +169,11 @@ a {
         list-style: none;
         background-color: $primary-bg;
         border-radius: 20px;
-        padding: 30px 50px;
+        padding: 28px 40px 28px 34px;
         margin-bottom: 25px;
         box-shadow: 0 5px 10px grey;
+        font-size: 16px;
+        font-weight: 500;
 
         @media (min-width: 767.98px) {
             padding: 28px 38px;
@@ -191,6 +193,11 @@ a {
 
         i {
             margin-right: 27px;
+            font-size: 20px;
+        }
+
+        .coloredIcone {
+            color: $purple;
         }
     }
 }
@@ -248,13 +255,16 @@ a {
 
                 .liked {
                     display: none;
-                    @include iconeGradient();
+                    @include iconeGradient;
                 }
-                &:active > .liked {
-                    display: unset;
-                }
-                &:active > .unliked {
-                    display: none;
+
+                &:active {
+                    & > .liked {
+                        display: unset;
+                    }
+                    & > .unliked {
+                        display: none;
+                    }
                 }
 
                 @media (min-width: 1024px) {

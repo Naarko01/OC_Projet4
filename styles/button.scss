@@ -7,4 +7,12 @@
     border-radius: 25px;
     font-size: 16px;
     font-weight: 500;
+    box-shadow: 0 3px 4px 1px $btnShadow;
+    transition: all 150ms;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 3px 4px 3px $btnShadow;
+        transform: scale(1.01);
+    }
 }
