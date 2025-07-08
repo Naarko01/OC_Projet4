@@ -106,7 +106,7 @@
         box-shadow: 0 4px 10px $cardShadow;
         cursor: pointer;
         overflow: hidden;
-        transition: all 150ms;
+        transition: all 150ms ease-in;
         &:hover {
             transform: scale(0.995);
 
@@ -116,6 +116,9 @@
             & > .coursePrice {
                 transform: translateX(-59px);
             }
+            & > .menuCard--content {
+                width: calc(100% - 120px);
+            }
         }
 
         &--content {
@@ -123,6 +126,7 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            transition: all 150ms ease-in;
 
             h4 {
                 margin: 0;
@@ -130,12 +134,18 @@
                 padding-left: 14px;
                 font-size: 18px;
                 font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             p {
                 margin: 0;
                 padding-left: 14px;
                 font-size: 15px;
                 font-weight: 300;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
         }
 

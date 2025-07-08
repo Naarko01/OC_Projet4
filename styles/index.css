@@ -504,7 +504,7 @@ a {
   box-shadow: 0 4px 10px rgb(216.75, 216.75, 216.75);
   cursor: pointer;
   overflow: hidden;
-  transition: all 150ms;
+  transition: all 150ms ease-in;
 }
 .menuCardsContainer .menuCard:hover {
   transform: scale(0.995);
@@ -515,11 +515,15 @@ a {
 .menuCardsContainer .menuCard:hover > .coursePrice {
   transform: translateX(-59px);
 }
+.menuCardsContainer .menuCard:hover > .menuCard--content {
+  width: calc(100% - 120px);
+}
 .menuCardsContainer .menuCard--content {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  transition: all 150ms ease-in;
 }
 .menuCardsContainer .menuCard--content h4 {
   margin: 0;
@@ -527,12 +531,18 @@ a {
   padding-left: 14px;
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menuCardsContainer .menuCard--content p {
   margin: 0;
   padding-left: 14px;
   font-size: 15px;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menuCardsContainer .menuCard .coursePrice {
   position: absolute;
