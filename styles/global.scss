@@ -183,6 +183,7 @@ a {
 
         &--number {
             background-color: $purple;
+            color: white;
             border-radius: 50%;
             padding: 3px 8px;
             text-align: start;
@@ -258,7 +259,7 @@ a {
                     @include iconeGradient;
                 }
 
-                &:active {
+                &:hover {
                     & > .liked {
                         display: unset;
                     }
