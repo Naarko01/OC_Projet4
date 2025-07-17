@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: hideLoader 3s forwards;
+    animation: hideLoader 2.75s forwards;
 
     @keyframes hideLoader {
         0% {
