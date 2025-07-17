@@ -8,6 +8,7 @@ body {
   justify-content: center;
   margin: 0;
   width: 100%;
+  height: 100%;
 }
 body .main-container {
   width: 100%;
@@ -24,6 +25,75 @@ body .main-container h2 {
 }
 body .main-container h3 {
   margin: 0;
+}
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hideLoader 3s forwards;
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.loaderContainer .loader {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.loaderContainer .loader--innerCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 50%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand", serif;
+  font-size: x-large;
+  color: white;
+}
+.loaderContainer .loader--outerCircle {
+  position: absolute;
+  top: -9px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border: 10px solid #353535;
+  border-top: 10px solid #99e2d0;
+  border-radius: 50%;
+  animation: loading 800ms infinite ease;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /******* home page style *******/
