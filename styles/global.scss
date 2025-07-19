@@ -354,5 +354,36 @@ a {
             margin-bottom: 40px;
             align-self: center;
         }
+        &--starter,
+        &--mainCourse,
+        &--dessert {
+            opacity: 0;
+            animation: delayedDisplay 1.5s ease-out forwards;
+
+            &.menu__presentation--starter {
+                animation-delay: 0s;
+            }
+            &.menu__presentation--mainCourse {
+                animation-delay: 0.75s;
+            }
+            &.menu__presentation--dessert {
+                animation-delay: 1.5s;
+            }
+
+            @keyframes delayedDisplay {
+                0% {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                10% {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+                100% {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
     }
 }
